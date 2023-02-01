@@ -41,19 +41,37 @@ function generateGrid(grid, dimension) { //Livello 1
         grid.append(boxElements);
         // Numerali
         boxElements.innerHTML += i;
+        // Prendili da parte
+        let boxCell = i;
         // Rendili cliccabili
-        const boxCells = document.querySelector(".box");
-        console.log(boxCells);
-
+        boxElements.addEventListener(
+            "click",
+            function () {
+                this.classList.toggle("cell-bg");
+                // Stampali in console
+                console.log("I box" + boxCell);
+            }
+        )
     }
 }
-
+/****************************
+ *                          *
+ *         ON CLICK         *
+ ****************************/
 
 // Al click del bottone, a seconda della scelta del giocatore - crea la griglia
 submitChoiceButton.addEventListener(
     "click",
     function () {
-        generateGrid(containerGrid, levelOne);
+        const levelUserSelection = document.querySelector("#levels").value;
+
+        if (levelUserSelection == "level-1") {
+            generateGrid(containerGrid, levelOne);
+        } if (levelUserSelection == "level-2") {
+            generateGrid(containerGrid, levelTwo);
+        } else if (levelUserSelection == "level-3") {
+            generateGrid(containerGrid, levelThree);;
+        }
     }
 
 )
