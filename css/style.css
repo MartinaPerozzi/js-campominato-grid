@@ -2,10 +2,42 @@
     width: 1000px;
     height: 1000px;
     flex-wrap: wrap;
+
 }
 
 .box {
     width: 100px;
     height: 100px;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.box-2 {
+    width: calc(100%/8);
+    height: calc(100%/8);
+    border: 1px solid rgb(143, 42, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.box-3 {
+    width: calc(100%/7);
+    height: calc(100%/7);
+    border: 1px solid rgb(62, 157, 191);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+
+}
+
+select {
+    height: 50px;
+    border: none;
+    font-size: 1.2rem;
 }
