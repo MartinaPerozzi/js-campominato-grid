@@ -16,8 +16,8 @@
 }
 
 .box-2 {
-    width: calc(100%/8);
-    height: calc(100%/8);
+    width: calc(100%/9);
+    height: calc(100%/9);
     border: 1px solid rgb(143, 42, 42);
     display: flex;
     justify-content: center;

@@ -3,9 +3,9 @@ const submitChoiceButton = document.querySelector(".submit-button");
 const containerGrid = document.querySelector(".grid");
 
 // Levels
-const levelOne = 100;
-const levelTwo = 81;
-const levelThree = 49;
+const levelOne = 100 + 1;
+const levelTwo = 81 + 1;
+const levelThree = 49 + 1;
 
 /********************************************
  *                                          *
