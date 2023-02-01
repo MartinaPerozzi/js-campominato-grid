@@ -20,6 +20,8 @@ const levelThree = 49;
  */
 
 function generateGrid(grid, dimension) { //Livello 1
+    // Parti da un luogo sempre vuoto
+    grid.innerHTML = "";
     // Per n volte
     for (let i = 1; i < dimension; i++) {
         // Crea un div
@@ -34,6 +36,7 @@ function generateGrid(grid, dimension) { //Livello 1
 }
 
 function generatedGridLevel2(grid, dimension) { //Livello 2
+    grid.innerHTML = "";
     for (let i = 1; i < dimension; i++) {
         // Crea un div
         const boxElements = document.createElement("div");
@@ -47,6 +50,7 @@ function generatedGridLevel2(grid, dimension) { //Livello 2
 }
 
 function generatedGridLevel3(grid, dimension) { //Livello 3
+    grid.innerHTML = "";
     for (let i = 1; i < dimension; i++) {
         // Crea un div
         const boxElements = document.createElement("div");
@@ -72,6 +76,7 @@ submitChoiceButton.addEventListener(
         } else if (levelUserSelection == "level-3") {
             generatedGridLevel3(containerGrid, levelThree);
         }
+
 
     }
 
