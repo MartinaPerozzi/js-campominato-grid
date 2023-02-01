@@ -1,14 +1,14 @@
 .grid {
-    width: 1000px;
-    height: 1000px;
+    width: 900px;
+    height: 900px;
     flex-wrap: wrap;
 
 }
 
 .box {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
+    width: calc(100%/10);
+    height: calc(100%/10);
+    border: 2px solid rgb(218, 80, 42);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
 .box-2 {
     width: calc(100%/9);
     height: calc(100%/9);
-    border: 1px solid rgb(143, 42, 42);
+    border: 2px solid rgb(222, 176, 49);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
 .box-3 {
     width: calc(100%/7);
     height: calc(100%/7);
-    border: 1px solid rgb(62, 157, 191);
+    border: 2px solid rgb(85, 194, 125);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,4 +40,18 @@ select {
     height: 50px;
     border: none;
     font-size: 1.2rem;
+}
+
+/* Button */
+.submit-button {
+    background-color: rgb(62, 157, 191);
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: rgb(80, 186, 225);
+    color: white;
+    outline: 2px dotted rgb(62, 157, 191);
+    outline-offset: 2px;
+    ;
 }
