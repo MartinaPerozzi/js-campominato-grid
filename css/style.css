@@ -2,7 +2,11 @@
     width: 900px;
     height: 900px;
     flex-wrap: wrap;
+    margin: 0 auto;
+}
 
+.game-cm {
+    text-align: center;
 }
 
 .box {
