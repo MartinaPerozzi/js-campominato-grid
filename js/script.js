@@ -2,6 +2,7 @@
 const submitChoiceButton = document.querySelector(".submit-button");
 const containerGrid = document.querySelector(".grid");
 
+
 // Levels
 const levelOne = 100 + 1;
 const levelTwo = 81 + 1;
@@ -28,7 +29,7 @@ function generateGrid(grid, dimension) { //Livello 1
         const boxElements = document.createElement("div");
         // e assegna loro una classe (dimensioni e bordo)
         // Prendo il valore inserito dall'utente (il livello)
-        const levelUserSelection = document.querySelector("#levels").value;
+        let levelUserSelection = document.querySelector("#levels").value;
 
         if (levelUserSelection == "level-1") {
             boxElements.classList.add("box");
@@ -63,7 +64,7 @@ function generateGrid(grid, dimension) { //Livello 1
 submitChoiceButton.addEventListener(
     "click",
     function () {
-        const levelUserSelection = document.querySelector("#levels").value;
+        let levelUserSelection = document.querySelector("#levels").value;
 
         if (levelUserSelection == "level-1") {
             generateGrid(containerGrid, levelOne);
