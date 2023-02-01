@@ -27,57 +27,33 @@ function generateGrid(grid, dimension) { //Livello 1
         // Crea un div
         const boxElements = document.createElement("div");
         // e assegna loro una classe (dimensioni e bordo)
-        boxElements.classList.add("box");
+        // Prendo il valore inserito dall'utente (il livello)
+        const levelUserSelection = document.querySelector("#levels").value;
+
+        if (levelUserSelection == "level-1") {
+            boxElements.classList.add("box");
+        } if (levelUserSelection == "level-2") {
+            boxElements.classList.add("box-2");
+        } else if (levelUserSelection == "level-3") {
+            boxElements.classList.add("box-3");
+        }
         // Metti i box creati all'interno della grid
         grid.append(boxElements);
         // Numerali
         boxElements.innerHTML += i;
+        // Rendili cliccabili
+        const boxCells = document.querySelector(".box");
+        console.log(boxCells);
+
     }
 }
 
-function generatedGridLevel2(grid, dimension) { //Livello 2
-    grid.innerHTML = "";
-    for (let i = 1; i < dimension; i++) {
-        // Crea un div
-        const boxElements = document.createElement("div");
-        // e assegna loro una classe (dimensioni e bordo)
-        boxElements.classList.add("box-2");
-        // Metti i box creati all'interno della grid
-        grid.append(boxElements);
-        // Numerali
-        boxElements.innerHTML += i;
-    }
-}
-
-function generatedGridLevel3(grid, dimension) { //Livello 3
-    grid.innerHTML = "";
-    for (let i = 1; i < dimension; i++) {
-        // Crea un div
-        const boxElements = document.createElement("div");
-        // e assegna loro una classe (dimensioni e bordo)
-        boxElements.classList.add("box-3");
-        // Metti i box creati all'interno della grid
-        grid.append(boxElements);
-        // Numerali
-        boxElements.innerHTML += i;
-    }
-}
 
 // Al click del bottone, a seconda della scelta del giocatore - crea la griglia
 submitChoiceButton.addEventListener(
     "click",
     function () {
-        const levelUserSelection = document.querySelector("#levels").value;
-
-        if (levelUserSelection == "level-1") {
-            generateGrid(containerGrid, levelOne);
-        } if (levelUserSelection == "level-2") {
-            generatedGridLevel2(containerGrid, levelTwo);
-        } else if (levelUserSelection == "level-3") {
-            generatedGridLevel3(containerGrid, levelThree);
-        }
-
-
+        generateGrid(containerGrid, levelOne);
     }
 
 )

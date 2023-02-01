@@ -59,3 +59,14 @@ select {
     outline-offset: 2px;
     ;
 }
+
+/* .box:active,
+.box-2:active,
+.box-3:active {
+    background-color: rgb(166, 216, 235);
+
+} */
+
+.cell-bg {
+    background-color: rgb(166, 216, 235);
+}
