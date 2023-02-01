@@ -34,7 +34,10 @@ function generateGrid(grid, dimension) { //Livello 1
         boxElements.innerHTML += i;
     }
 }
-
+/****************************
+ *                          *
+ *         ON CLICK         *
+ ****************************/
 // Al click del bottone, a seconda della scelta del giocatore - crea la griglia
 submitChoiceButton.addEventListener(
     "click",
