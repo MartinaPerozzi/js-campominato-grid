@@ -4,9 +4,9 @@ const containerGrid = document.querySelector(".grid");
 
 
 // Levels
-const levelOne = 100 + 1;
-const levelTwo = 81 + 1;
-const levelThree = 49 + 1;
+const levelOne = 100;
+const levelTwo = 81;
+const levelThree = 49;
 
 /********************************************
  *                                          *
@@ -24,7 +24,7 @@ function generateGrid(grid, dimension) { //Livello 1
     // Parti da un luogo sempre vuoto
     grid.innerHTML = "";
     // Per n volte
-    for (let i = 1; i < dimension; i++) {
+    for (let i = 1; i <= dimension; i++) {
         // Crea un div
         const boxElements = document.createElement("div");
         // e assegna loro una classe (dimensioni e bordo)
@@ -48,17 +48,18 @@ function generateGrid(grid, dimension) { //Livello 1
         boxElements.addEventListener(
             "click",
             function () {
+                console.log(this);
                 this.classList.toggle("cell-bg");
                 // Stampali in console
-                console.log("I box" + boxCell);
+                console.log("Il box che hai cliccato è il numero: " + boxCell);
             }
         )
     }
 }
-/****************************
- *                          *
- *         ON CLICK         *
- ****************************/
+/*************************************
+ *                                   *
+ *             ON CLICK              *
+ *************************************/
 
 // Al click del bottone, a seconda della scelta del giocatore - crea la griglia
 submitChoiceButton.addEventListener(
